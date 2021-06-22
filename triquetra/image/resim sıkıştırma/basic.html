@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<div class="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ImageCompression</a>
+      
+    </div>
+  </nav>
+  <br><br>
+  
+<hr>
+<div  class="input-group mb-3">
+    <label for="web-worker">
+        Compress in web-worker
+        <input class="form-control" id="web-worker" type="file" accept="image/*" onchange="compressImage(event, true);">
+    </label>
+    <p id="web-worker-log"></p>
+</div>
+<hr>
+<div class="input-group mb-3">
+    <label for="main-thread">
+        Compress in main thread 
+        <input class="form-control" id="main-thread" type="file" accept="image/*" onchange="compressImage(event, false);">
+    </label>
+    <p id="main-thread-log"></p>
+
+</div>
+<table class="table">
+    <tr>
+        <td scope="row">Input preview</td>
+        <td scope="row">Output preview</td>
+    </tr>
+    <tr>
+        <td scope="row"><img id="preview" /></td>
+        <td scope="row"> <img id="preview-after-compress" /></td>
+    </tr>
+</table>
+</div>
+
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<script src="app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@1.0.5/dist/browser-image-compression.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>browser-image-manipulation</title>
+    <script src="https://polyfill.io/v3/polyfill.js"></script>
+    <script src="../dist/browser-image-manipulation.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div>
+    <div class="header">
+  
+  <!-- As a heading -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 c-primary">ImageApp</span>
+    </div>
+  </nav>
+    </div>
+    <div class="wrapper-grid">
+        <div class="box">
+            <p class="fs-6 ">Choose image and resize to 800x400, with fix image orientation</p>
+            <input class="input-group-text" type="file" id="exampleResize">
+        </div>
+        <div class="box">
+            <img src="" id="exampleResizeImg">
+        </div>
+        <div class="box">
+            Exif info
+            <textarea class="input-group-text" id="exampleResizeExif"></textarea>
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Circle->Grayscale->Pizelize->Rotate</p>
+            <input class="input-group-text" type="file" id="exampleFluent">
+        </div>
+        <div class="box">
+            <img src="" id="exampleFluentImg">
+        </div>
+        <div class="box">
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image and resize to 800x400 with red bg</p>
+            <input class="input-group-text" type="file" id="centerInRectangle">
+        </div>
+        <div class="box">
+            <img src="" id="centerInRectangleImg">
+        </div>
+        <div class="box">
+            <img src="" id="centerInRectangleServer">
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image to convert in circle with res 400x400</p>
+            <input class="input-group-text" type="file" id="exampleToCircle">
+        </div>
+        <div class="box">
+            <img src="" id="exampleToCircleImg">
+        </div>
+        <div class="box">
+            <img src="" id="exampleToCircleImgServer">
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image to rotate</p>
+            <p><a href="#" id="exampleRotateChangeDegree">Rotate by 10 degree</a></p>
+            <input class="input-group-text" type="file" id="exampleRotate">
+        </div>
+        <div class="box">
+            <img src="" id="exampleRotateImg">
+        </div>
+        <div class="box">
+            <img src="" id="exampleRotateImgServer">
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image to graysacle</p>
+            <input class="input-group-text" type="file" id="exampleToGrayscale">
+        </div>
+        <div class="box">
+            <img src="" id="exampleToGrayscaleImg">
+        </div>
+        <div class="box">
+            <img src="" id="exampleToGrayscaleImgServer">
+        </div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image to pixelize</p>
+            <input class="input-group-text" type="file" id="examplePixelize">
+        </div>
+        <div class="box">
+            <img src="" id="examplePixelizeImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image to blur</p>
+            <input class="input-group-text" type="file" id="exampleBlur">
+        </div>
+        <div class="box">
+            <img src="" id="exampleBlurImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for crop to 200x300</p>
+            <input class="input-group-text" type="file" id="exampleCrop">
+        </div>
+        <div class="box">
+            <img src="" id="exampleCropImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for drawLine</p>
+            <input class="input-group-text" type="file" id="exampleDrawLine">
+        </div>
+        <div class="box">
+            <img src="" id="exampleDrawLineImg">
+        </div>
+        <div class="box"></div>
+
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for drawPolygon</p>
+            <input class="input-group-text" type="file" id="exampleDrawPolygon">
+        </div>
+        <div class="box">
+            <img src="" id="exampleDrawPolygonImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for drawRectangle</p>
+            <input class="input-group-text" type="file" id="exampleDrawRectangle">
+        </div>
+        <div class="box">
+            <img src="" id="exampleDrawRectangleImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for drawText</p>
+            <input class="input-group-text" type="file" id="exampleDrawText">
+        </div>
+        <div class="box">
+            <img src="" id="exampleDrawTextImg">
+        </div>
+        <div class="box"></div>
+
+        <div class="box">
+            <p class="fs-6 ">Choose image for perspective</p>
+            <input class="input-group-text" type="file" id="examplePerspective">
+        </div>
+        <div class="box">
+            <img src="" id="examplePerspectiveImg">
+        </div>
+        <div class="box"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
